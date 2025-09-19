@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content= "It is a Student Registration System where students can view, update and delete their data.">
+    <title>Student Registration</title>
+    <meta name="author" content="Ayush Verma">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sirivennela&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Name of The Assignment -->
+   
+     <div class="main-header">
+        <h1>Student Registration System</h1>
+        <p>A modern and easier to use Student Registration System where students can view, update and delete their data without any issues.</p>
+    </div>
+
+    <!-- Open Dialog Box for filling student details -->
+    <button class="add-student-button" id="openAddStudentDialog">Add Student</button>
+
+    <dialog id="addStudentDialog">
+        <div class="dialog-header">
+            <h2>Add Student</h2>
+        </div>
+        <div class="dialog-form-content">
+            <form id="studentForm" method="dialog">
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" name="studentName" placeholder="Harry D'Souza" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentID">Student ID</label>
+                    <input type="text" id="studentID" name="studentID" placeholder="123456" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentEmail">Email</label>
+                    <input type="email" id="studentEmail" name="studentEmail" placeholder="email@domain.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentPhone">Phone Number</label>
+                    <input type="tel" id="studentPhone" name="studentPhone" maxlength="10", minlength="10" placeholder="+91 9876543210">
+                </div>
+                <!-- Submit button -->
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </dialog>
+    <!-- Section to display list of students -->
+    <div class="student-list-container" id="studentListContainer">
+        <div class="empty-state">No students registered yet.</div>
+    </div>
+        
+        <script src="script.js"></script>
+    </section>
+</body>
+</html>
